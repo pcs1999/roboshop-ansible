@@ -3,9 +3,32 @@
     name: nginx
     state: present
 
+- name: Recursively remove directory old html
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: absent
+
+- name: Recursively add directory html
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: directory
+
+
+- name: Unarchive a frontend zip file that needs to be downloaded
+  ansible.builtin.unarchive:
+    src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
+    dest: /usr/share/nginx/html
+    remote_src: yes
+
+
+- name: Copy file roboshop config
+  ansible.builtin.copy:
+    src: roboshop.conf
+    dest: /etc/nginx/default.d/roboshop.conf
+
 - name: Start service nginx, if not started
-  ansible.builtin.service:
+  ansible.builtin.systemd:
     name: nginx
-    state:
-     - started
-     
+    state: restarted
+    enabled: yes
+    daemon_reload: yes
