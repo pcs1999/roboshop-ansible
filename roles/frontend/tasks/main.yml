@@ -1,0 +1,11 @@
+- name: Install the  present version of nginx
+  ansible.builtin.yum:
+    name: nginx
+    state: present
+
+- name: Start service nginx, if not started
+  ansible.builtin.service:
+    name: nginx
+    state:
+     started 
+     enable
