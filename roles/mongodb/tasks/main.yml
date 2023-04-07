@@ -3,10 +3,10 @@
     src: mongo.repo
     dest: /etc/yum.repos.d/mongo.repo
 
-- name: Install the  present version of mongodb
+- name: Installing mongodb server
   ansible.builtin.yum:
     name: mongodb-org
-    state: present
+    state: installed
 
 - name: update listen address
   ansible.builtin.replace:
