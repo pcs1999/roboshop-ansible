@@ -1,7 +1,7 @@
 - name: Install the  present version of nginx
   ansible.builtin.yum:
     name: nginx
-    state: present
+    state: installed
 
 - name: Recursively remove directory old html
   ansible.builtin.file:
@@ -31,4 +31,4 @@
     name: nginx
     state: restarted
     enabled: yes
-    daemon_reload: yes
+    
