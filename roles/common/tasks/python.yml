@@ -13,7 +13,7 @@
 - name: Install specified python requirements
   ansible.builtin.pip:
     requirements: /app/requirements.txt
-    excecutable: pip3.6
+    executable: pip3.6
 
 
 - name: include systemd file
