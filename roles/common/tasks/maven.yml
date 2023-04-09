@@ -15,6 +15,6 @@
 - name: include systemd file
   ansible.builtin.include_tasks: "systemd.yml"
 
-- name: load schema
+- name: include mysql schema.yml and run
   ansible.builtin.include_tasks: "{{schema_type}}_schema.yml"
   when: schema_load
