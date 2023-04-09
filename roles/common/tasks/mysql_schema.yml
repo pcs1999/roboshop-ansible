@@ -7,7 +7,7 @@
     state: installed
 
 - name: Load Schema
-  ansible.builtin.shell: mysql --host mysql-dev.chandupcs.online -uroot "{{mysql_root_password}}" </app/schema/{{component}}.sql
+  ansible.builtin.shell: mysql --host mysql-dev.chandupcs.online -uroot "{{root_mysql_password}}" </app/schema/{{component}}.sql
 
 - name: Start {{component}} Service
   ansible.builtin.systemd:
