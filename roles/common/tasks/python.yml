@@ -1,0 +1,19 @@
+- name: install python,gcc and python3-devel
+  ansible.builtin.yum:
+     name:
+     - python36
+     - gcc
+     - python3-devel
+     state: installed
+
+- name: include app_pre_req file
+  ansible.builtin.include_tasks: "app_pre_req.yml"
+
+- name: Load mysql Schema
+  ansible.builtin.shell: pip3.6 install -r requirements.txt
+  args:
+    chdir: /app
+
+
+- name: include systemd file
+  ansible.builtin.include_tasks: "systemd.yml"
