@@ -9,10 +9,11 @@
 - name: include app_pre_req file
   ansible.builtin.include_tasks: "app_pre_req.yml"
 
-- name: Load mysql Schema
-  ansible.builtin.shell: pip3.6 install -r requirements.txt
-  args:
-    chdir: /app
+
+- name: Install specified python requirements
+  ansible.builtin.pip:
+    requirements: /app/requirements.txt
+    excecutable: pip3.6
 
 
 - name: include systemd file
