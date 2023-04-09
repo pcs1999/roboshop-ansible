@@ -1,5 +1,5 @@
 
-- name: Configure YUM Repos from the script provided by vendor
+- name: Configure YUM erlag and rabbitmq server Repos from the script provided by vendor
   ansible.builtin.shell: curl -s {{ item }} |  bash
   loop:
     - https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh
@@ -13,7 +13,7 @@
     state: installed
 
 
-- name: Start service erlang
+- name: Start service rabbitmq-server
   ansible.builtin.systemd:
     name: rabbitmq-server
     state: restarted
