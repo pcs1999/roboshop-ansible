@@ -6,10 +6,21 @@
      - mysql
     state: installed
 
-- name: Load mysql Schema
-  ansible.builtin.shell: mysql --host mysql-dev.chandupcs.online -uroot -p{{root_mysql_password}} </app/schema/{{component}}.sql
 
-- name: Start {{component}} Service
+- name: load mysql schema
+  community.mysql.mysql_db:
+    state: import
+    name: all
+    target: /app/schema/{{component}}.sql
+    login_host: mysql-dev.chandupcs.online
+    login_user: "{{ mysql_user }}"
+    login_password: "{{ root_mysql_password }}"
+  vars:
+    mysql_user: "{{ lookup('aws_ssm', '{{env}}.mysql.DB_ADMIN_USER', region='us-east-1' ) }}"
+    root_mysql_password: "{{ lookup('aws_ssm', '{{env}}.mysql.DB_ADMIN_PASS', region='us-east-1' ) }}"
+
+
+- name: REStart {{component}} Service
   ansible.builtin.systemd:
     name: "{{component}}"
     state: restarted
