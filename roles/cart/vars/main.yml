@@ -1,2 +1,3 @@
 component: cart 
-schema_load: false 
+schema_load: false
+app_version: 0.0.0
