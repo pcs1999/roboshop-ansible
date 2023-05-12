@@ -48,6 +48,6 @@
         - {name: "dev.rds.DB_ADMIN_PASS", value: "Roboshop" }
         - {name: "dev.rabbitmq.DB_ADMIN_USER", value: "rabbitmq112345" }
         - {name: "dev.rabbitmq.DB_ADMIN_PASS", value: "Roboshop@123456" }
-        - {name: "nexus_user", value: "admin" }
-        - {name: "nexus_pass", value: "admin123" }
+        - {name: "nexus.user", value: "admin" }
+        - {name: "nexus.pass", value: "admin123" }
 
