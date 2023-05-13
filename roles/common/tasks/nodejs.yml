@@ -9,6 +9,11 @@
 - name: include app_pre_req file
   ansible.builtin.include_tasks: app_pre_req.yml
 
+- name: dowloading the docdb pem file
+  ansible.builtin.get_url:
+    url: https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
+    dest: app/rds-combined-ca-bundle.pem
+  when: schema_load
 
 - name: Install Nodejs dependencies
   community.general.npm:
