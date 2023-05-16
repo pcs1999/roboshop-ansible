@@ -29,5 +29,5 @@ scrape_configs:
     relabel_configs:
 {% for item in labels %}
     - source_labels: [__meta_ec2_tag_{{ item.tag}} ]
-      target_label: {{ item.label }}
+      target_label: {{ item.labels }}
 {% endfor %}
