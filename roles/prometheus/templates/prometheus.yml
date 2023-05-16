@@ -28,7 +28,7 @@ scrape_configs:
         port: 9100
         filters:
           - name: "tag:project"
-            values: ["roboshop"]
+            values: ["roboshop1"]
     relabel_configs:
 {% for item in labels %}
       - source_labels: [__meta_ec2_tag_{{ item.tag }}]
