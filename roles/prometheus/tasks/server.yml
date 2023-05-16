@@ -4,8 +4,8 @@
     dest: /opt/prometheus/prometheus.yml
     vars:
       labels:
-        - { tag: "env" , label: "environment" }
-        - { tag: "Name" , label: "name" }
+        - { tag: "env" , labels: "environment" }
+        - { tag: "Name" , labels: "name" }
 
 - name: restart the prometheus
   ansible.builtin.systemd:
