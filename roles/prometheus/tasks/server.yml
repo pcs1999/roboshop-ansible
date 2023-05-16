@@ -1,0 +1,8 @@
+- name: copy the file server.yml
+  ansible.builtin.template:
+    src: prometheus.yml
+    dest: /opt/prometheus/prometheus.yml
+
+- name: restart the prometheus
+  ansible.builtin.systemd:
+    name: prometheus.service
