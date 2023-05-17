@@ -50,4 +50,5 @@
         - {name: "dev.rabbitmq.DB_ADMIN_PASS", value: "Roboshop@123456" }
         - {name: "nexus.user", value: "admin" }
         - {name: "nexus.pass", value: "admin123" }
+        - {name: "grafana.api_key", value: "eyJrIjoiaGRJOTR2VGR1MWdBVUNaTXJXd21BZjhCc2s0VmloRXIiLCJuIjoiY2xpIiwiaWQiOjF9" }
 

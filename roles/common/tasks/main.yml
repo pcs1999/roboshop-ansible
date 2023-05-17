@@ -3,3 +3,19 @@
 
 - name: install  prometheus node exporter
   ansible.builtin.shell: sudo labauto prometheus-node-exporter
+
+## grafana
+- name : make a template
+  ansible.builtin.template:
+    src: grafana-template.json
+    dest:  /tmp/grafana.json
+    remote_src: yes
+
+
+- name: Import Grafana dashboard
+  community.grafana.grafana_dashboard:
+    grafana_url: http://3.238.142.183:3000
+    grafana_api_key: "{{ lookup('aws_ssm', 'grafana.api_key', region='us-east-1' ) }}"
+    state: present
+    overwrite: yes
+    path: /tmp/grafana.json
