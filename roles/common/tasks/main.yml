@@ -14,7 +14,7 @@
 
 - name: Import Grafana dashboard
   community.grafana.grafana_dashboard:
-    grafana_url: http://3.238.142.183:3000
+    grafana_url: http://44.198.187.89:3000
     grafana_api_key: "{{ lookup('aws_ssm', 'grafana.api_key', region='us-east-1' ) }}"
     state: present
     overwrite: yes
