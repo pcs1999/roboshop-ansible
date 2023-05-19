@@ -24,6 +24,10 @@
     name: prometheus
     state: restarted
 
+- name: check whether prometheus  started or not
+  ansible.builtin.shell: netstat -lntp | grep 9090
+
+
 - name : copy alert-manager file
   ansible.builtin.template:
     src: alertmanager.yml
@@ -35,6 +39,8 @@
     name: alertmanager
     state: restarted
 
+- name: check whether alertmanager  started or not
+  ansible.builtin.shell: netstat -lntp | grep 9093
 
 
 ## grafana given in meta file
