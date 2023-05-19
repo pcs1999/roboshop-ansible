@@ -24,6 +24,17 @@
     name: prometheus
     state: restarted
 
+- name : copy alert-manager file
+  ansible.builtin.template:
+    src: alert-manager.yml
+    dest:  /opt/alertmanager/alertmanager.yml
+    remote_src: yes
+
+- name: Restart Alert-manager
+  ansible.builtin.systemd:
+    name: alertmanager
+    state: restarted
+
 
 
 ## grafana given in meta file
