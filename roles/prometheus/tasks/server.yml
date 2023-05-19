@@ -26,7 +26,7 @@
 
 - name : copy alert-manager file
   ansible.builtin.template:
-    src: alert-manager.yml
+    src: alertmanager.yml
     dest:  /opt/alertmanager/alertmanager.yml
     remote_src: yes
 
