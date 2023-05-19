@@ -20,7 +20,7 @@
 
 
 
-## grafana
+## grafana given in meta file
 
 #- name : make a template
 #  ansible.builtin.template:

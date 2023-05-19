@@ -8,7 +8,7 @@
 - name: Installing erlang & rabbitmq-server
   ansible.builtin.yum:
     name:
-#    - erlang
+#    - erlang  //as rabbitmq-server itself installing the erlang-26.0 so no need separately from 18/05/23 this issue happening
     - rabbitmq-server
     state: installed
 

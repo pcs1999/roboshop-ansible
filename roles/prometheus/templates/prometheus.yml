@@ -30,6 +30,7 @@ scrape_configs:
           - name: "tag:project"
             values: ["roboshop1"]
     relabel_configs:
+#      expression below always give in starting
 {% for item in labels %}
       - source_labels: [__meta_ec2_tag_{{ item.tag }}]
         target_label: {{ item.label }}
