@@ -13,6 +13,12 @@
     dest:  /opt/prometheus/record_rules.yml
     remote_src: yes
 
+- name : copy alert rules file
+  ansible.builtin.template:
+    src: alert-rules.yml
+    dest:  /opt/prometheus/alert-rules.yml
+    remote_src: yes
+
 - name: Restart Prometheus
   ansible.builtin.systemd:
     name: prometheus
