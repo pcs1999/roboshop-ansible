@@ -53,6 +53,6 @@
         - {name: "grafana.api_key", value: "eyJrIjoiaGRJOTR2VGR1MWdBVUNaTXJXd21BZjhCc2s0VmloRXIiLCJuIjoiY2xpIiwiaWQiOjF9" }
         - {name: "ses.user", value: "AKIAXEPZX5IKFS4PMXUJ" }
         - {name: "ses.pass", value: "BLsq9+qp6N5qPbVfnjSo/25auyspL76sdXVCKKWu4DCh" }
-        - {name: "dev-SSH.user", value: "centos" }
+        - {name: "dev-SSH.user", value: "root" }
         - {name: "dev-SSH.pass", value: "DevOps321" }
 
