@@ -9,6 +9,12 @@
     src: alert.yml
     dest: /tmp/alert.yml
 
+- name: Copy Prometheus Alerts Configuration to Prometheus Server
+  ansible.builtin.shell: sshpass -p {{ lookup('aws_ssm', '{{env}}-SSH.user', region='us-east-1' ) }} scp /tmp/alert.yml {{ lookup('aws_ssm', '{{env}}-SSH.pass', region='us-east-1' ) }}@172.31.0.51:/opt/prometheus/alerts/{{component}}.yml
+
+
+
+
 ## grafana
 - name : make a template
   ansible.builtin.template:
