@@ -12,7 +12,8 @@
 - name: Copy Prometheus Alerts Configuration to Prometheus Server
   ansible.builtin.shell: sshpass -p {{ lookup('aws_ssm', '{{env}}-SSH.pass', region='us-east-1' ) }} scp /tmp/alert.yml {{ lookup('aws_ssm', '{{env}}-SSH.user', region='us-east-1' ) }}@172.31.0.51:/opt/prometheus/alerts/{{component}}.yml
 
-
+- name: reload  prometheus server
+  ansible.builtin.shell: curl -v -s -XPOST http://172.31.0.51:9090/-/reload
 
 
 ## grafana dashboard for graphs
