@@ -15,7 +15,7 @@
 
 
 
-## grafana
+## grafana dashboard for graphs
 - name : make a template
   ansible.builtin.template:
     src: grafana-template.json
