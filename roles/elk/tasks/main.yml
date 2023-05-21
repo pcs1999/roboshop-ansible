@@ -2,6 +2,6 @@
   ansible.builtin.include_tasks: "logstash.yml"
   when: logstash is defined
 
-#- name: Setup Filebeat
-#  ansible.builtin.include_tasks: "filebeat.yml"
-#  when: filebeat
+- name: Setup Filebeat
+  ansible.builtin.include_tasks: "filebeat.yml"
+  when: filebeat
