@@ -34,8 +34,9 @@ filebeat.inputs:
 
     # Exclude lines. A list of regular expressions to match. It drops the lines that are
     # matching any regular expression from the list.
-    #exclude_lines: ['^DBG']
-
+{%  if exclude_lines  %}
+    exclude_lines: {{ exclude_words }}
+{% endif %}
     # Include lines. A list of regular expressions to match. It exports the lines that are
     # matching any regular expression from the list.
     #include_lines: ['^ERR', '^WARN']
@@ -161,11 +162,11 @@ output.logstash:
 
 # ================================= Processors =================================
 processors:
-  - add_host_metadata:
-      when.not.contains.tags: forwarded
-  - add_cloud_metadata: ~
-  - add_docker_metadata: ~
-  - add_kubernetes_metadata: ~
+#  - add_host_metadata:
+#      when.not.contains.tags: forwarded
+#  - add_cloud_metadata: ~
+#  - add_docker_metadata: ~
+#  - add_kubernetes_metadata: ~
 
     # ================================== Logging ===================================
 
