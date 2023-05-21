@@ -29,6 +29,32 @@
         - {name: "dev.user.MONGO", value: "true" }
         - {name: "dev.user.MONGO_URL", value: "mongodb://mongodb-dev.chandupcs.online:27017/users" }
         - {name: "dev.user.REDIS_HOST", value: "redis-dev.chandupcs.online" }
+          
+          
+          
+          
+### prod 
+        - { name: "prod.cart.REDIS_HOST", value: "redis-prod.chandupcs.online" }
+        - { name: "prod.cart.CATALOGUE_HOST", value: "catalogue-prod.chandupcs.online" }
+        - { name: "prod.cart.CATALOGUE_PORT", value: "80" }
+        - { name: "prod.catalogue.MONGO", value: "true" }
+        - { name: "prod.catalogue.MONGO_URL", value: "mongodb://mongodb-prod.chandupcs.online:27017/catalogue" }
+        - { name: "prod.frontend.CATALOGUE_URL", value: "http://catalogue-prod.chandupcs.online:80/" }
+        - { name: "prod.frontend.CART_URL", value: "http://cart-prod.chandupcs.online:80/" }
+        - { name: "prod.frontend.USER_URL", value: "http://user-prod.chandupcs.online:80/" }
+        - { name: "prod.frontend.PAYMENT_URL", value: "http://payment-prod.chandupcs.online:80/" }
+        - { name: "prod.frontend.SHIPPING_URL", value: "http://shipping-prod.chandupcs.online:80/" }
+        - { name: "prod.payment.CART_HOST", value: "cart-prod.chandupcs.online" }
+        - { name: "prod.payment.USER_HOST", value: "user-prod.chandupcs.online" }
+        - { name: "prod.payment.CART_PORT", value: "80" }
+        - { name: "prod.payment.USER_PORT", value: "80" }
+        - { name: "prod.payment.AMQP_HOST", value: "rabbitmq-prod.chandupcs.online" }
+        - { name: "prod.payment.AMQP_USER", value: "roboshop" }
+        - { name: "prod.shipping.CART_ENDPOINT", value: "cart-prod.chandupcs.online:80" }
+        - { name: "prod.shipping.DB_HOST", value: "mysql-prod.chandupcs.online" }
+        - { name: "prod.user.MONGO", value: "true" }
+        - { name: "prod.user.MONGO_URL", value: "mongodb://mongodb-prod.chandupcs.online:27017/users" }
+        - { name: "prod.user.REDIS_HOST", value: "redis-prod.chandupcs.online" }
 
         ### PASSWORDS SHOULD NEVER BE KEPT IN THESE REPOS, THOSE SHOULD BE CREATED MAUALLY, BUT FOR LAB PURPOSE IAM CREATING HERE
     - name: Create Secrets
@@ -56,3 +82,21 @@
         - {name: "dev-SSH.user", value: "root" }
         - {name: "dev-SSH.pass", value: "DevOps321" }
 
+###prod
+        - { name: "prod.payment.AMQP_PASS", value: "roboshop123" }
+        - { name: "prod.rabbitmq.AMQP_PASS", value: "roboshop123" }
+        - { name: "prod.mysql.DB_ADMIN_USER", value: "root" }
+        - { name: "prod.mysql.DB_ADMIN_PASS", value: "RoboShop@1" }
+        - { name: "prod.docdb.DB_ADMIN_USER", value: "docdb1" }
+        - { name: "prod.docdb.DB_ADMIN_PASS", value: "Roboshop" }
+        - { name: "prod.rds.DB_ADMIN_USER", value: "rds1" }
+        - { name: "prod.rds.DB_ADMIN_PASS", value: "Roboshop" }
+        - { name: "prod.rabbitmq.DB_ADMIN_USER", value: "rabbitmq112345" }
+        - { name: "prod.rabbitmq.DB_ADMIN_PASS", value: "Roboshop@123456" }
+        - { name: "nexus.user", value: "admin" }
+        - { name: "nexus.pass", value: "admin123" }
+        - { name: "grafana.api_key", value: "eyJrIjoiaGRJOTR2VGR1MWdBVUNaTXJXd21BZjhCc2s0VmloRXIiLCJuIjoiY2xpIiwiaWQiOjF9" }
+        - { name: "ses.user", value: "AKIAXEPZX5IKFS4PMXUJ" }
+        - { name: "ses.pass", value: "BLsq9+qp6N5qPbVfnjSo/25auyspL76sdXVCKKWu4DCh" }
+        - { name: "prod-SSH.user", value: "root" }
+        - { name: "prod-SSH.pass", value: "DevOps321" }
