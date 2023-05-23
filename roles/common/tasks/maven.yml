@@ -11,11 +11,11 @@
 - name: include app_pre_req file
   ansible.builtin.include_tasks: "app_pre_req.yml"
 
-#
-#- name: mvn
-#  ansible.builtin.shell:  mv target/{{component}}-1.0.jar {{component}}.jar
-#  args:
-#    chdir: /app
+
+- name: mvn
+  ansible.builtin.shell: mvn clean package ; mv target/{{component}}-{{app_version}}.jar {{component}}.jar
+  args:
+    chdir: /app
 
 - name: include systemd file
   ansible.builtin.include_tasks: "systemd.yml"
