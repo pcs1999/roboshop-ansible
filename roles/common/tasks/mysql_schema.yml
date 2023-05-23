@@ -7,16 +7,16 @@
     state: installed
 
 
-- name: Check Schema is Loaded or not
-  community.mysql.mysql_info:
-    filter:
-      - databases
-    exclude_fields: db_size
-    return_empty_dbs: false
-    login_host: "{{ lookup('aws_ssm', '{{env}}.rds.endpoint', region='us-east-1' ) }}"
-    login_user: "{{ lookup('aws_ssm', '{{env}}.rds.DB_ADMIN_USER', region='us-east-1' ) }}"
-    login_password: "{{ lookup('aws_ssm', '{{env}}.rds.DB_ADMIN_PASS', region='us-east-1' ) }}"
-  register: out
+#- name: Check Schema is Loaded or not
+#  community.mysql.mysql_info:
+#    filter:
+#      - databases
+#    exclude_fields: db_size
+#    return_empty_dbs: false
+#    login_host: "{{ lookup('aws_ssm', '{{env}}.rds.endpoint', region='us-east-1' ) }}"
+#    login_user: "{{ lookup('aws_ssm', '{{env}}.rds.DB_ADMIN_USER', region='us-east-1' ) }}"
+#    login_password: "{{ lookup('aws_ssm', '{{env}}.rds.DB_ADMIN_PASS', region='us-east-1' ) }}"
+#  register: out
 
 #- name: Load MySQL Schema
 #  community.mysql.mysql_db:
@@ -31,7 +31,7 @@
 
 - name: load mysql schema
   ansible.builtin.shell: mysql -h {{ lookup('aws_ssm', '{{env}}.rds.endpoint', region='us-east-1' ) }} -u{{ lookup('aws_ssm', '{{env}}.rds.DB_ADMIN_USER', region='us-east-1' ) }} -p{{ lookup('aws_ssm', '{{env}}.rds.DB_ADMIN_PASS', region='us-east-1' ) }} </app/schema/{{component}}.sql
-  when: "'cities' not in out.databases"
+#  when: "'cities' not in out.databases"
 
 
 
