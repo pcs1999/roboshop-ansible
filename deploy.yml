@@ -1,0 +1,9 @@
+- name: Roboshop setup
+  hosts: "{{host}}"
+  become: yes
+  serial: 1
+  tasks:
+    - name: depolyment
+      ansible.builtin.import_role:
+        name: common
+        tasks_from: deploy

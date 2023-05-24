@@ -55,6 +55,12 @@
         - { name: "prod.user.MONGO", value: "true" }
         - { name: "prod.user.MONGO_URL", value: "mongodb://mongodb-prod.chandupcs.online:27017/users" }
         - { name: "prod.user.REDIS_HOST", value: "redis-prod.chandupcs.online" }
+        - { name: "prod.cart.app_version", value: "1.2.0" }
+        - { name: "prod.catalogue.app_version", value: "1.0.3" }
+        - { name: "prod.frontend.app_version", value: "0.0.0" }
+        - { name: "prod.user.app_version", value: "1.2.0" }
+        - { name: "prod.shipping.app_version", value: "1.1.0" }
+        - { name: "prod.payment.app_version", value: " 0.0.0" }
 
         ### PASSWORDS SHOULD NEVER BE KEPT IN THESE REPOS, THOSE SHOULD BE CREATED MAUALLY, BUT FOR LAB PURPOSE IAM CREATING HERE
     - name: Create Secrets
@@ -100,3 +106,6 @@
         - { name: "ses.pass", value: "BLsq9+qp6N5qPbVfnjSo/25auyspL76sdXVCKKWu4DCh" }
         - { name: "prod-SSH.user", value: "root" }
         - { name: "prod-SSH.pass", value: "DevOps321" }
+
+
+
