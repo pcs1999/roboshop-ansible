@@ -29,8 +29,7 @@
         - {name: "dev.user.MONGO", value: "true" }
         - {name: "dev.user.MONGO_URL", value: "mongodb://mongodb-dev.chandupcs.online:27017/users" }
         - {name: "dev.user.REDIS_HOST", value: "redis-dev.chandupcs.online" }
-        - {name: "sonarqube.user", value: "admin" }
-        - {name: "sonarqube.pass", value: "admin123" }
+
 
           
           
@@ -90,6 +89,8 @@
         - {name: "ses.pass", value: "BLsq9+qp6N5qPbVfnjSo/25auyspL76sdXVCKKWu4DCh" }
         - {name: "dev-SSH.user", value: "root" }
         - {name: "dev-SSH.pass", value: "DevOps321" }
+        - { name: "sonarqube.user", value: "admin" }
+        - { name: "sonarqube.pass", value: "admin123" }
 
 ###prod
         - { name: "prod.payment.AMQP_PASS", value: "roboshop123" }
