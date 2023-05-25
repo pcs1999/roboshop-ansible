@@ -10,10 +10,10 @@
     dest: /tmp/alert.yml
 
 - name: Copy Prometheus Alerts Configuration to Prometheus Server
-  ansible.builtin.shell: sshpass -p {{ lookup('aws_ssm', '{{env}}-SSH.pass', region='us-east-1' ) }} scp /tmp/alert.yml {{ lookup('aws_ssm', '{{env}}-SSH.user', region='us-east-1' ) }}@172.31.0.51:/opt/prometheus/alerts/{{component}}.yml
+  ansible.builtin.shell: sshpass -p {{ lookup('aws_ssm', '{{env}}-SSH.pass', region='us-east-1' ) }} scp /tmp/alert.yml {{ lookup('aws_ssm', '{{env}}-SSH.user', region='us-east-1' ) }}@172.31.12.132:/opt/prometheus/alerts/{{component}}.yml
 
 - name: reload  prometheus server
-  ansible.builtin.shell: curl -v -s -XPOST http://172.31.0.51:9090/-/reload
+  ansible.builtin.shell: curl -v -s -XPOST http://172.31.12.132:9090/-/reload
 
 
 - name: import ELK
@@ -32,7 +32,7 @@
 
 - name: Import Grafana dashboard
   community.grafana.grafana_dashboard:
-    grafana_url: http://172.31.0.51:3000
+    grafana_url: http://172.31.12.132:3000
     grafana_api_key: "{{ lookup('aws_ssm', 'grafana.api_key', region='us-east-1' ) }}"
     state: present
     overwrite: yes

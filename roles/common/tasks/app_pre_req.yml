@@ -20,7 +20,7 @@
 
 - name: Download {{component}} App content
   ansible.builtin.unarchive:
-    src: http://{{nexus_user}}:{{nexus_pass}}@172.31.15.218:8081/repository/{{component}}/{{component}}-{{app_version}}.zip
+    src: http://{{nexus_user}}:{{nexus_pass}}@172.31.92.158:8081/repository/{{component}}/{{component}}-{{app_version}}.zip
     dest: /app
     remote_src: yes
   vars:
