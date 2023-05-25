@@ -29,6 +29,9 @@
         - {name: "dev.user.MONGO", value: "true" }
         - {name: "dev.user.MONGO_URL", value: "mongodb://mongodb-dev.chandupcs.online:27017/users" }
         - {name: "dev.user.REDIS_HOST", value: "redis-dev.chandupcs.online" }
+        - {name: "sonarqube.user", value: "admin" }
+        - {name: "sonarqube.pass", value: "admin123" }
+
           
           
           
