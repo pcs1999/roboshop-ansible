@@ -34,7 +34,7 @@
         - { name: "dev.frontend.app_version", value: "0.0.0" }
         - { name: "dev.user.app_version", value: "1.2.0" }
         - { name: "dev.shipping.app_version", value: "1.1.0" }
-        - { name: "dev.payment.app_version", value: " 1.1.0" }
+        - { name: "dev.payment.app_version", value: "1.1.0" }
 
 
           
@@ -68,7 +68,7 @@
         - { name: "prod.frontend.app_version", value: "0.0.0" }
         - { name: "prod.user.app_version", value: "1.2.0" }
         - { name: "prod.shipping.app_version", value: "1.1.0" }
-        - { name: "prod.payment.app_version", value: " 1.1.0" }
+        - { name: "prod.payment.app_version", value: "1.1.0" }
 
 
         ### PASSWORDS SHOULD NEVER BE KEPT IN THESE REPOS, THOSE SHOULD BE CREATED MAUALLY, BUT FOR LAB PURPOSE IAM CREATING HERE
