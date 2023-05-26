@@ -31,7 +31,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "j8br3P8Vk"
+        "uid": "waTcqpwVz"
       },
       "fieldConfig": {
         "defaults": {
@@ -97,7 +97,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "j8br3P8Vk"
+            "uid": "waTcqpwVz"
           },
           "expr": "node_systemd_unit_state{name=\"{{env}}-{{component}}\",exported_name=\"{{service_name}}.service\",state=\"active\"}",
           "refId": "A"
@@ -109,7 +109,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "j8br3P8Vk"
+        "uid": "waTcqpwVz"
       },
       "fieldConfig": {
         "defaults": {
@@ -163,7 +163,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "j8br3P8Vk"
+            "uid": "waTcqpwVz"
           },
           "expr": "100 - (avg by (name) (floor(rate(node_cpu_seconds_total{ mode=\"idle\", name=\"{{env}}-{{component}}\"}[1m]) * 100)))",
           "refId": "A"
@@ -175,7 +175,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "j8br3P8Vk"
+        "uid": "waTcqpwVz"
       },
       "fieldConfig": {
         "defaults": {
@@ -230,7 +230,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "j8br3P8Vk"
+            "uid": "waTcqpwVz"
           },
           "expr": "\r\n100 - (avg by (name) (floor(rate(node_cpu_seconds_total{ mode=\"idle\", name=\"{{env}}-{{component}}\"}[1m]) * 100)))",
           "refId": "A"
@@ -242,7 +242,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "j8br3P8Vk"
+        "uid": "waTcqpwVz"
       },
       "fieldConfig": {
         "defaults": {
@@ -324,7 +324,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "j8br3P8Vk"
+            "uid": "waTcqpwVz"
           },
           "expr": "100 - (avg by (name) (floor(rate(node_cpu_seconds_total{ mode=\"idle\", name=\"{{env}}-{{component}}\"}[1m]) * 100)))",
           "refId": "A"
@@ -336,7 +336,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "j8br3P8Vk"
+        "uid": "waTcqpwVz"
       },
       "fieldConfig": {
         "defaults": {
@@ -417,7 +417,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "j8br3P8Vk"
+            "uid": "waTcqpwVz"
           },
           "expr": "node_memory_used_percent{name=\"{{env}}-{{component}}\"} ",
           "refId": "A"
