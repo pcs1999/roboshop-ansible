@@ -32,3 +32,7 @@
   vars:
     rabbitmq_roboshop_password: "{{ lookup('aws_ssm', '{{env}}.{{component}}.AMQP_PASS', region='us-east-1' ) }}"
 
+- name: to install prometheus
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: main
