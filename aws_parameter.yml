@@ -72,36 +72,43 @@
 
 
 # PROD for kubernetes
-        - { name: "prod.cart.REDIS_HOST", value: "redis-prod.chandupcs.online" }
+        - { name: "prod.cart.REDIS_HOST", value: "prod-elasti-cache-cluster.mlcbvd.0001.use1.cache.amazonaws.com" }
         - { name: "prod.cart.CATALOGUE_HOST", value: "catalogue-roboshop" }
         - { name: "prod.cart.CATALOGUE_PORT", value: "8080" }
+
         - { name: "prod.catalogue.DOCUMENTDB", value: "true" }
         - { name: "prod.catalogue.DOCUMENTDB_USER", value: "docdb1" }
         - { name: "prod.catalogue.DOCUMENTDB_PASS", value: "Roboshop" }
         - { name: "prod.catalogue.DOCUMENTDB_ENDPOINT", value: "prod-docdb-cluster-instance-1.crgf39vwmbxk.us-east-1.docdb.amazonaws.com:27017" }
         - { name: "prod.catalogue.MONGO_URL", value: "mongodb://docdb1:RoboShop@prod-docdb-cluster-instance-1.crgf39vwmbxk.us-east-1.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=us-east-1-bundle.pem&retryWrites=false" }
+
+        - { name: "prod.user.DOCUMENTDB", value: "true" }
+        - { name: "prod.user.DOCUMENTDB_USER", value: "docdb1" }
+        - { name: "prod.user.DOCUMENTDB_PASS", value: "Roboshop" }
+        - { name: "prod.user.REDIS_HOST", value: "prod-elasti-cache-cluster.mlcbvd.0001.use1.cache.amazonaws.com" }
+        - { name: "prod.user.MONGO_URL", value: "mongodb://docdb1:RoboShop@prod-docdb-cluster-instance-1.crgf39vwmbxk.us-east-1.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=us-east-1-bundle.pem&retryWrites=false" }
+        - { name: "prod.user.DOCUMENTDB_ENDPOINT", value: "prod-docdb-cluster-instance-1.crgf39vwmbxk.us-east-1.docdb.amazonaws.com:27017" }
+
         - { name: "prod.frontend.CATALOGUE_URL", value: "http://catalogue-prod.chandupcs.online:80/" }
         - { name: "prod.frontend.CART_URL", value: "http://cart-prod.chandupcs.online:80/" }
         - { name: "prod.frontend.USER_URL", value: "http://user-prod.chandupcs.online:80/" }
         - { name: "prod.frontend.PAYMENT_URL", value: "http://payment-prod.chandupcs.online:80/" }
         - { name: "prod.frontend.SHIPPING_URL", value: "http://shipping-prod.chandupcs.online:80/" }
-        - { name: "prod.payment.CART_HOST", value: "cart-prod.chandupcs.online" }
-        - { name: "prod.payment.USER_HOST", value: "user-prod.chandupcs.online" }
-        - { name: "prod.payment.CART_PORT", value: "80" }
-        - { name: "prod.payment.USER_PORT", value: "80" }
+
+        - { name: "prod.payment.CART_HOST", value: "cart-roboshop" }
+        - { name: "prod.payment.USER_HOST", value: "user-roboshop" }
+        - { name: "prod.payment.CART_PORT", value: "8080" }
+        - { name: "prod.payment.USER_PORT", value: "8080" }
         - { name: "prod.payment.AMQP_HOST", value: "rabbitmq-prod.chandupcs.online" }
         - { name: "prod.payment.AMQP_USER", value: "roboshop" }
-        - { name: "prod.shipping.CART_ENDPOINT", value: "cart-prod.chandupcs.online:80" }
-        - { name: "prod.shipping.DB_HOST", value: "mysql-prod.chandupcs.online" }
-        - { name: "prod.user.MONGO", value: "true" }
-        - { name: "prod.user.MONGO_URL", value: "mongodb://mongodb-prod.chandupcs.online:27017/users" }
-        - { name: "prod.user.REDIS_HOST", value: "redis-prod.chandupcs.online" }
-        - { name: "prod.cart.app_version", value: "1.2.0" }
-        - { name: "prod.catalogue.app_version", value: "1.0.3" }
-        - { name: "prod.frontend.app_version", value: "0.0.0" }
-        - { name: "prod.user.app_version", value: "1.2.0" }
-        - { name: "prod.shipping.app_version", value: "1.1.0" }
-        - { name: "prod.payment.app_version", value: "0.0.0" }
+
+        - { name: "prod.shipping.CART_ENDPOINT", value: "catalogue-roboshop:8080" }
+        - { name: "prod.shipping.DB_HOST", value: "prod-rds-cluster.cluster-crgf39vwmbxk.us-east-1.rds.amazonaws.com" }
+        - { name: "prod.shipping.DB_PASS", value: "RoboShop@1" }
+        - { name: "prod.shipping.DB_USER", value: "root" }
+
+
+
 
 
         ### PASSWORDS SHOULD NEVER BE KEPT IN THESE REPOS, THOSE SHOULD BE CREATED MAUALLY, BUT FOR LAB PURPOSE IAM CREATING HERE
