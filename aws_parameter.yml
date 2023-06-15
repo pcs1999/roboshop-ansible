@@ -148,7 +148,7 @@
         - { name: "prod.rabbitmq.DB_ADMIN_PASS", value: "Roboshop@123456" }
         - { name: "nexus.user", value: "admin" }
         - { name: "nexus.pass", value: "admin123" }
-        - { name: "grafana.api_key", value: "eyJrIjoiUHBncjVXd0Q2ZDd3MDhoTnZzeVlkWmp3SjZDZUlGRzgiLCJuIjoiY2xpIiwiaWQiOjF9" }
+        - { name: "grafana.api_key", value: "eyJrIjoidzBpZm9jRGRZRGx3NVRPU0VuVUo3aVZ4NjROM2FtMkYiLCJuIjoicm9ib3Nob3AiLCJpZCI6MX0=" }
         - { name: "ses.user", value: "AKIATZX7HJG6PETLQVUS" }
         - { name: "ses.pass", value: "BEd/hB7UeM3jQEUp9j9PVk/QNP81DaLWFWTSWUdOJOiA" }
         - { name: "prod-SSH.user", value: "root" }
