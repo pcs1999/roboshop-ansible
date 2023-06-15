@@ -103,7 +103,7 @@
         - { name: "prod.payment.AMQP_USER", value: "roboshop" }
 
         - { name: "prod.shipping.CART_ENDPOINT", value: "cart-roboshop:8080" }
-        - { name: "prod.shipping.DB_HOST", value: "prod-rds-cluster.cluster-crgf39vwmbxk.us-east-1.rds.amazonaws.com" }
+        - { name: "prod.shipping.DB_HOST", value: "prod-rds-cluster.cluster-crgf39vwmbxk.us-east-1.rds.amazonaws.com:3306" }
         - { name: "prod.shipping.DB_PASS", value: "Roboshop" }
         - { name: "prod.shipping.DB_USER", value: "rds1" }
 
