@@ -77,17 +77,17 @@
         - { name: "prod.cart.CATALOGUE_PORT", value: "8080" }
 
         - { name: "prod.catalogue.DOCUMENTDB", value: "true" }
-        - { name: "prod.catalogue.DOCUMENTDB_USER", value: "docdb1" }
-        - { name: "prod.catalogue.DOCUMENTDB_PASS", value: "Roboshop" }
-        - { name: "prod.catalogue.DOCUMENTDB_ENDPOINT", value: "prod-docdb-cluster.cluster-cmscnppwjzuf.us-east-1.docdb.amazonaws.com:27017" }
-        - { name: "prod.catalogue.MONGO_URL", value: "mongodb://docb1:Roboshop@prod-docdb-cluster.cluster-cmscnppwjzuf.us-east-1.docdb.amazonaws.com:27017/catalogue?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false" }
+        - { name: "prod.catalogue.DOCDB_USER", value: "docdb1" }
+        - { name: "prod.catalogue.DOCDB_PASS", value: "Roboshop" }
+        - { name: "prod.catalogue.DOCDB_ENDPOINT", value: "prod-docdb-cluster.cluster-crgf39vwmbxk.us-east-1.docdb.amazonaws.com:27017" }
+        - { name: "prod.catalogue.MONGO_URL", value: "mongodb://docdb1:Roboshop@prod-docdb-cluster.cluster-crgf39vwmbxk.us-east-1.docdb.amazonaws.com:27017/catalogue?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false" }
 
         - { name: "prod.user.DOCUMENTDB", value: "true" }
-        - { name: "prod.user.DOCUMENTDB_USER", value: "docdb1" }
-        - { name: "prod.user.DOCUMENTDB_PASS", value: "Roboshop" }
+        - { name: "prod.user.DOCDB_USER", value: "docdb1" }
+        - { name: "prod.user.DOCDB_PASS", value: "Roboshop" }
         - { name: "prod.user.REDIS_HOST", value: "prod-elasti-cache-cluster.mlcbvd.0001.use1.cache.amazonaws.com" }
         - { name: "prod.user.MONGO_URL", value: "mongodb://docdb1:Roboshop@prod-docdb-cluster.cluster-crgf39vwmbxk.us-east-1.docdb.amazonaws.com:27017/users?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false" }
-        - { name: "prod.user.DOCUMENTDB_ENDPOINT", value: "prod-docdb-cluster.cluster-crgf39vwmbxk.us-east-1.docdb.amazonaws.com:27017" }
+        - { name: "prod.user.DOCDB_ENDPOINT", value: "prod-docdb-cluster.cluster-crgf39vwmbxk.us-east-1.docdb.amazonaws.com" }
 
         - { name: "prod.frontend.CATALOGUE_URL", value: "http://catalogue-prod.chandupcs.online:80/" }
         - { name: "prod.frontend.CART_URL", value: "http://cart-prod.chandupcs.online:80/" }
