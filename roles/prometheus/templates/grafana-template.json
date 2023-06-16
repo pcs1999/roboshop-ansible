@@ -31,7 +31,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "oDHLPbx4z"
+        "uid": "waTcqpwVz"
       },
       "fieldConfig": {
         "defaults": {
@@ -86,7 +86,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "oDHLPbx4z"
+            "uid": "waTcqpwVz"
           },
           "expr": "100 - (avg by (name) (floor(rate(node_cpu_seconds_total{ mode=\"idle\", name=\"{{env}}-{{component}}\"}[1m]) * 100)))",
           "refId": "A"
@@ -98,7 +98,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "oDHLPbx4z"
+        "uid": "waTcqpwVz"
       },
       "fieldConfig": {
         "defaults": {
@@ -172,7 +172,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "oDHLPbx4z"
+            "uid": "waTcqpwVz"
           },
           "expr": "100 - (avg by (name) (floor(rate(node_cpu_seconds_total{ mode=\"idle\", name=\"{{env}}-{{component}}\"}[1m]) * 100)))",
           "refId": "A"
